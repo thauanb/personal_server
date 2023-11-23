@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Servidor Pessoal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded',()=>{
+      setInterval(()=>{
+      let isChecked = checkState()
+      var batteryLevel = <%= info.battery.percent %>;
+      let btn = document.querySelector('#btn-desligar')
+      // console.log(batteryLevel,isChecked)
+      if (isChecked && batteryLevel ==100){
+        btn.click()
+      }
+      window.location.reload()
+      },60000)
+    })
+
+
+    function checkState(){
+      var el_switch = document.querySelector('#flexSwitchCheckChecked')
+      if (el_switch.checked){
+        console.log('Ligado')
+        el_switch.setAttribute('data-state','true')
+        return el_switch.checked
+      }else{
+        console.log('Desligado')
+        el_switch.setAttribute('data-state','false')
+        return el_switch.checked
+      }
+
+    }
+
+
+  </script>
+</head>
+
+<body>
+  <div class="d-flex flex-row p-1 mt-2">
+    <div class="p-1 border border-dark-subtle size-m m-1 text-center shadow rounded">
+      Tomada
+    </div>
+    <div class="p-1 border border-dark-subtle size-m m-1 text-center shadow rounded-pill fw-semibold fs-6">
+      <span class="material-symbols-outlined icon" data-state="<%= info.battery.isCharging==true?'power':'power_off' %>">
+        <%= info.battery.isCharging==true?'power':'power_off' %>
+      </span>
+    </div>
+  </div>
+
+  <div class="d-flex flex-row p-1 mb-1">
+    <div class="p-1 border border-dark-subtle size-m m-1 text-center shadow rounded ">
+      Bateria
+    </div>
+    <div class="progress border border-dark-subtle size-m progress-w m-1 shadow rounded-pill fw-semibold fs-6">
+      <div class="progress-bar progress-style p-3 fw-bold text-black" role="progressbar" style="width: <%= info.battery.percent %>%;" aria-valuenow="<%= info.battery.percent %>" aria-valuemin="0" aria-valuemax="100">
+        <%= info.battery.percent %>%
+      </div>
+    </div>
+  </div>
+
+    <div class="d-flex flex-row p-1 align-items-center justify-content-start">
+      <div class="m-1">
+        <a id="btn-desligar" href="./desligar" class="btn btn-primary fz-14">Desligar</a>
+      </div>
+     
+      <div class="form-check form-switch mx-2 m-1">
+        <input onclick="checkState()" class="form-check-input fz-14" type="checkbox" id="flexSwitchCheckChecked" checked data-state="">
+      </div>
+
+      <div>
+        <p class="m-1 fz-14">Desligar quando estiver carregado</p>
+      </div>
+
+    </div>
+
+
+
+</body>
+
+</html>
