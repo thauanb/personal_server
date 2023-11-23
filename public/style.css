@@ -1,0 +1,33 @@
+.size-m{
+   height: 35px;
+   width: 74.1833px;
+   border: 1px solid black ;
+   background-color: white;
+
+}
+.progress-w{
+   width: 100px;
+}
+.progress-style{
+   border-color: #0d6efd;
+   overflow: visible !important;
+}
+.icon[data-state="power_off"]{
+   color: red;
+}
+.icon[data-state="power"]{
+   color: green;
+}
+
+.form-check-label{
+   font-size: 12px;
+}
+
+.form-check-input{
+   height: 26px;
+   width: 100px !important;
+}
+
+.fz-14{
+   font-size: 12px;
+}
