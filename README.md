@@ -1,11 +1,6 @@
 # Personal Server
-![GitHub repo size](https://img.shields.io/github/repo-size/thauanb/personal_server?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/thauanb/personal_server?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/thauanb/personal_server?style=for-the-badge)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/thauanb/personal_server?style=for-the-badge)
-![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/thauanb/personal_server?style=for-the-badge)
 
- Sinta-se livre para usar esse `template` de servidor em `NodeJS` para o que você quiser.
+Sinta-se livre para usar esse `template` de servidor em `NodeJS` para o que você quiser.
 
 <img src="imagens/tela_web.png" alt="Exemplo imagem">
 
