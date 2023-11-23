@@ -1,14 +1,14 @@
 # Personal Server
 
-Sinta-se livre para usar esse `template` de servidor em `NodeJS` para o que você quiser.
 
+## Sinta-se livre para usar esse `template` de servidor em `NodeJS` para o que você quiser.
+
+<br>
 <img src="imagens/tela_web.png" alt="Exemplo imagem">
-
-> Visão web do servidor
-
+<br><br>
 <img src="imagens/tela_console.png" alt="Exemplo imagem">
 
-> Console do servidor web.
+
 
 ## Exemplos de Aplicação
 
@@ -18,14 +18,14 @@ Sinta-se livre para usar esse `template` de servidor em `NodeJS` para o que voc�
 
 Para instalar o `personal_server` , siga estas etapas:
 
-```
+```bash
 npm run
 ```
 
 ## ☕ Usando 
 
 
-```
+```bash
 npm run dev
 ```
 
